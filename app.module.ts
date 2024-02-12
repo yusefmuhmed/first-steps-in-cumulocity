@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule as ngRouterModule } from '@angular/router';
-import { CoreModule, BootstrapComponent, RouterModule,HOOK_NAVIGATOR_NODES, NavigatorNode } from '@c8y/ngx-components';
+import { CoreModule, BootstrapComponent, RouterModule,HOOK_NAVIGATOR_NODES, NavigatorNode, DashboardComponent } from '@c8y/ngx-components';
 import { RenderDataComponentComponent } from './render-data-component/render-data-component.component';
 import { AppRoutingModule } from './app-routing.module';
 import {navigatorNodeProvider} from './providers/renderProvider.navigation'
@@ -30,7 +30,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
    ],
   providers: [
     navigatorNodeProvider,
-    NgForm
+    NgForm,
+    DashboardComponent
   ]
 })
 export class AppModule {}

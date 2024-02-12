@@ -1,3 +1,12 @@
+
+
+<c8y-dashboard>
+
+<c8y-dashboard-child #cpWidget3 [isFrozen]="isFrozen" [x]="0" [y]="3" [width]="4" [height]="4"
+[class]="'card-dashboard panel-content-transparent'">
+
+
+
 <div class="form-group">
   <c8y-form-group>
     <app-custom-widget [config]="config"></app-custom-widget>
@@ -12,3 +21,39 @@
     </div>
   </c8y-form-group>
 </div>
+
+
+
+
+
+</c8y-dashboard-child>
+
+
+
+
+<c8y-dashboard-child #cpWidget3 [isFrozen]="isFrozen" [x]="0" [y]="3" [width]="4" [height]="4"
+  [class]="'card-dashboard panel-content-transparent'">
+  
+
+
+  
+  <!-- <c8y-dashboard-child-action>
+    <a href="" (click)="cpWidget3.isFrozen = !cpWidget3.isFrozen; (false)">
+      <i [c8yIcon]="cpWidget3.isFrozen ? 'lock' : 'unlock'"></i> Toggle freeze
+    </a>
+  </c8y-dashboard-child-action> -->
+  x: {{ cpWidget3.x }}<br />
+  y: {{ cpWidget3.y }}<br />
+  width: {{ cpWidget3.width }}<br />
+  height: {{ cpWidget3.height }}<br />
+
+
+
+
+</c8y-dashboard-child>
+
+
+</c8y-dashboard>
+
+
+

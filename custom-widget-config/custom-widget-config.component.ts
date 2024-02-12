@@ -27,6 +27,8 @@ export class CustomWidgetConfigComponent {
     zoom: 16,
     center: { lat: 0, lng: 0 }
   };
+isFrozen: boolean = false;
+showTitle: boolean= true;
 
 
 
