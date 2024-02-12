@@ -14,19 +14,40 @@ import * as Leaflet from 'leaflet';
 
 export class CustomWidgetConfigComponent {
 
-
+  config:any={text:"Map"}
   
   map!: Leaflet.Map;
   markers: Leaflet.Marker[] = [];
-  options = {
+  options: Leaflet.MapOptions = {
     layers: [
       Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       })
     ],
     zoom: 16,
-    center: { lat: 28.626137, lng: 79.821603 }
+    center: { lat: 0, lng: 0 }
+  };
+
+
+
+  ngOnInit() {
+    this.getCurrentLocation();
   }
+
+  getCurrentLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.options.center = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        console.log(position.coords.latitude,position.coords.longitude);
+        
+        this.map.setView([position.coords.latitude, position.coords.longitude], this.options.zoom);
+      });
+    }
+  }
+
 
   initMarkers() {
     const initialMarkers = [
@@ -60,6 +81,7 @@ export class CustomWidgetConfigComponent {
 
   onMapReady($event: Leaflet.Map) {
     this.map = $event;
+    this.getCurrentLocation();
     this.initMarkers();
   }
 

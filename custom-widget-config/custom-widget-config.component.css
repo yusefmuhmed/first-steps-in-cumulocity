@@ -1,10 +1,16 @@
-.widget-container{
-    background:#f1f1f1;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
-    height: 50rem;
-    border-radius: 25px;
+.widget-container {
+  background: #f1f1f1;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+  height: 50rem;
+  border-radius: 25px;
 }
 
 .map-container {
-    height: 400px;
-  }
+  height: 400px;
+}
+
+.map-container.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
