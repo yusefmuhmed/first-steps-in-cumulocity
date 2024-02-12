@@ -4,3 +4,7 @@
     height: 50rem;
     border-radius: 25px;
 }
+
+.map-container {
+    height: 400px;
+  }
