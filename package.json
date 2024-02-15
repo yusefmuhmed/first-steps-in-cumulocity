@@ -3,7 +3,7 @@
   "version": "1018.0.215",
   "description": "",
   "scripts": {
-    "start": "c8ycli server --app.brandingEntry=branding/branding.less",
+    "start": "c8ycli server --app.brandingEntry='./branding/branding.less' ",
     "build": "c8ycli build",
     "deploy": "c8ycli deploy",
     "locale-extract": "c8ycli locale-extract",
