@@ -10,6 +10,7 @@ import { CustomWidgetConfigComponent } from './custom-widget-config/custom-widge
 import { NgForm } from '@angular/forms';
 import { WidgetsModule } from "@c8y/ngx-components/widgets";
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     ngRouterModule.forRoot([], { enableTracing: false, useHash: true }),
     CoreModule.forRoot(),
     WidgetsModule,
-    LeafletModule
+    LeafletModule,
+    NgxChartsModule
   ],
   bootstrap: [BootstrapComponent],
    declarations: [		

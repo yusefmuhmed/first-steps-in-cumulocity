@@ -1,8 +1,5 @@
-<p>
-  render-data-component works!
-</p>
-<i [c8yIcon]="'collapse-arrow'"></i>
-<div class="animated flash infinite">Hello, I'm flashing forever!</div>
+
+
 
 <div class="container-fluid">
   <table class="table table-striped c8y-table-responsive">
@@ -48,3 +45,25 @@
     </tbody>
   </table>
 </div>
+
+
+<ngx-charts-bar-horizontal
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [legendPosition]="'below'"
+  [animations]="true"
+  [legendTitle]="''"
+  [wrapTicks]="true"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)">
+</ngx-charts-bar-horizontal>
